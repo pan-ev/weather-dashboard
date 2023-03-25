@@ -1,0 +1,30 @@
+header h1 {
+    text-align: center;
+    background: rgb(39,36,96);
+    background: linear-gradient(90deg, rgba(39,36,96,1) 0%, rgba(30,52,172,1) 0%, rgba(48,110,170,1) 100%);
+    color: white;
+}
+
+.btn-secondary {
+    margin: 8px;
+    border-radius: 8px !important;
+}
+
+
+#currentWeather {
+    height: 50px;
+}
+
+#futureWeather {
+    justify-content: space-between;
+}
+
+.card {
+    background-color: rgba(30,52,172,1);
+    color: white;
+    font-size: .8em;
+}
+
+h5 {
+    color: white;
+}
