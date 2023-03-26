@@ -14,6 +14,11 @@
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <script src="https://kit.fontawesome.com/d46da7265a.js" crossorigin="anonymous"></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+    crossorigin="anonymous"
+  ></script>
     <title>Weather Dashboard</title>
   </head>
 
@@ -22,6 +27,7 @@
   </header>
 
   <body class="row">
+    <!-- Search Bar and Button -->
     <section class="col-sm-3 col-md-3 col-lg-3" id="searchSection">
       <form class="form-inline my-2 my-lg-0">
         <h2>Search for a City:</h2>
@@ -37,39 +43,56 @@
         </button>
       </form>
       <hr />
+      <!-- Search History Buttons -->
       <div class="btn-group-vertical" role="group" aria-label="Basic example" id="cityBtns">
-        <button type="button" class="btn btn-secondary" id="Atlanta">Atlanta</button>
-        <button type="button" class="btn btn-secondary" id="Denver">Denver</button>
-        <button type="button" class="btn btn-secondary" id="Seattle">Seattle</button>
-        <button type="button" class="btn btn-secondary" id="San Francisco">San Francisco</button>
-        <button type="button" class="btn btn-secondary" id="Orlando">Orlando</button>
-        <button type="button" class="btn btn-secondary" id="New York">New York</button>
-        <button type="button" class="btn btn-secondary" id="Chicago">Chicago</button>
-        <button type="button" class="btn btn-secondary" id="Austin">Austin</button>
       </div>
     </section>
     <section class="col-sm-9 col-md-9 col-lg-9" id="weatherSection">
-        <div class="border mx-3 my-3" id="currentWeather"></div>
+        <!-- Current Weather Display -->
+        <div class="border mx-3 my-3" id="currentWeather">
+          <h2></h2>
+          <p id="currentTemp"></p>
+          <p id="currentWind"></p>
+          <p id="currentHumidity"></p>
+        </div>
+
+        <!-- 5 Day Forecast Display -->
         <h3 class="mx-3">5-Day Forecast:</h3>
         <div class="row mx-3" id="futureWeather">
-          <div class="card col-sm-2 col-md-2 col-lg-2">
-            <h5>9/14/2022</h5>
-            <i class="fa-regular fa-sun"></i>
-            <p>Temp: 63.55</p>
-            <p>Wind: 3.94 MPH</p>
-            <p>Humidity: 63%</p>
-          </div>
-          <div class="card col-sm-2 col-md-2 col-lg-2">
+          <div class="card col-sm-2 col-md-2 col-lg-2 forecast-card">
             <h5></h5>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
           </div>
-          <div class="card col-sm-2 col-md-2 col-lg-2">
+          <div class="card col-sm-2 col-md-2 col-lg-2 forecast-card">
             <h5></h5>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
           </div>
-          <div class="card col-sm-2 col-md-2 col-lg-2">
+          <div class="card col-sm-2 col-md-2 col-lg-2 forecast-card">
             <h5></h5>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
           </div>
-          <div class="card col-sm-2 col-md-2 col-lg-2">
+          <div class="card col-sm-2 col-md-2 col-lg-2 forecast-card">
             <h5></h5>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+          </div>
+          <div class="card col-sm-2 col-md-2 col-lg-2 forecast-card">
+            <h5></h5>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
           </div>
       </div>
     </section>

@@ -11,9 +11,6 @@ header h1 {
 }
 
 
-#currentWeather {
-    height: 50px;
-}
 
 #futureWeather {
     justify-content: space-between;
