@@ -13,12 +13,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="https://kit.fontawesome.com/d46da7265a.js" crossorigin="anonymous"></script>
     <script
-    src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
-    crossorigin="anonymous"
-  ></script>
+      src="https://kit.fontawesome.com/d46da7265a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
     <title>Weather Dashboard</title>
   </head>
 
@@ -44,56 +47,60 @@
       </form>
       <hr />
       <!-- Search History Buttons -->
-      <div class="btn-group-vertical" role="group" aria-label="Basic example" id="cityBtns">
-      </div>
+      <div
+        class="btn-group-vertical"
+        role="group"
+        aria-label="Basic example"
+        id="cityBtns"
+      ></div>
     </section>
     <section class="col-sm-9 col-md-9 col-lg-9" id="weatherSection">
-        <!-- Current Weather Display -->
-        <div class="border mx-3 my-3" id="currentWeather">
-          <h2></h2>
-          <p id="currentTemp"></p>
-          <p id="currentWind"></p>
-          <p id="currentHumidity"></p>
-        </div>
+      <!-- Current Weather Display -->
+      <div class="border mx-3 my-3" id="currentWeather">
+        <h2></h2>
+        <p id="currentTemp"></p>
+        <p id="currentWind"></p>
+        <p id="currentHumidity"></p>
+      </div>
 
-        <!-- 5 Day Forecast Display -->
-        <h3 class="mx-3">5-Day Forecast:</h3>
-        <div class="row mx-3" id="futureWeather">
-          <div class="card col-sm-2 col-md-2 col-lg-2 forecast-card">
-            <h5></h5>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-          </div>
-          <div class="card col-sm-2 col-md-2 col-lg-2 forecast-card">
-            <h5></h5>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-          </div>
-          <div class="card col-sm-2 col-md-2 col-lg-2 forecast-card">
-            <h5></h5>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-          </div>
-          <div class="card col-sm-2 col-md-2 col-lg-2 forecast-card">
-            <h5></h5>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-          </div>
-          <div class="card col-sm-2 col-md-2 col-lg-2 forecast-card">
-            <h5></h5>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-          </div>
+      <!-- 5 Day Forecast Display -->
+      <h3 class="mx-3">5-Day Forecast:</h3>
+      <div class="row mx-3" id="futureWeather">
+        <div class="card col-sm-2 col-md-2 col-lg-2 forecast-card">
+          <h5></h5>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <div class="card col-sm-2 col-md-2 col-lg-2 forecast-card">
+          <h5></h5>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <div class="card col-sm-2 col-md-2 col-lg-2 forecast-card">
+          <h5></h5>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <div class="card col-sm-2 col-md-2 col-lg-2 forecast-card">
+          <h5></h5>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <div class="card col-sm-2 col-md-2 col-lg-2 forecast-card">
+          <h5></h5>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
       </div>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

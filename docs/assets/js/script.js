@@ -43,7 +43,7 @@ function searchCity() {
 
   localStorage.setItem("weatherSearchHistory", JSON.stringify(uniqueSearches));
 
-  var geocodingURL = `http://api.openweathermap.org/geo/1.0/direct?appid=${apiKey}&q=${searchedCity}`;
+  var geocodingURL = `https://api.openweathermap.org/geo/1.0/direct?appid=${apiKey}&q=${searchedCity}`;
   getCoordinates(geocodingURL);
 
   if (event) {
