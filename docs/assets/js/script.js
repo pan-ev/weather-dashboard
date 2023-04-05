@@ -6,35 +6,33 @@ var searchUnits = "imperial";
 var searchedCity;
 var savedSearches = [];
 
-if (localStorage.getItem("weatherSearchHistory")) {
-  savedSearches = JSON.parse(localStorage.getItem("weatherSearchHistory"));
-  console.log(savedSearches);
-}
-
-createSearchButtons(savedSearches);
+createSearchButtons();
 
 // Event listener for search history buttons
-$(".btn-secondary").each(function () {
-  $(this).on("click", function () {
+// $(".btn-secondary").each(function () {
+  $(document).on("click", ".btn-secondary", function () {
     searchText.value = $(this).attr("id");
     // searchedCity = $(this).attr("id");
     searchCity();
   });
-});
+;
 
 searchBtn.addEventListener("click", searchCity);
 
 // +++++++++++++++++++++++++
 // Generates the geocoding URL and calls the getCoordinates function. Saves the search to local storage
 // *************************
-function searchCity() {
+function searchCity(event) {
   var searchedCity = searchText.value;
-
+  if (event) {
+    event.preventDefault();
+  }
   //   Add the most recent search to the array of savedSearches
   savedSearches.unshift(searchedCity);
 
   //   Get unique values and create new array so there aren't duplicate searches
   var uniqueSearches = [...new Set(savedSearches)];
+
 
   //   Keep the list of saved searches to 10
   if (uniqueSearches.length > 10) {
@@ -45,10 +43,7 @@ function searchCity() {
 
   var geocodingURL = `https://api.openweathermap.org/geo/1.0/direct?appid=${apiKey}&q=${searchedCity}`;
   getCoordinates(geocodingURL);
-
-  if (event) {
-    event.preventDefault();
-  }
+  createSearchButtons();
 }
 
 // +++++++++++++++++++++++++
@@ -146,13 +141,16 @@ function getForecast(url) {
     });
 }
 
-function createSearchButtons(searchArray) {
+function createSearchButtons() {
+  if (localStorage.getItem("weatherSearchHistory")) {
+    savedSearches = JSON.parse(localStorage.getItem("weatherSearchHistory"));
+  }
   cityBtnsContainer.innerHTML = "";
-  for (let i = 0; i < searchArray.length; i++) {
+  for (let i = 0; i < savedSearches.length; i++) {
     var newButton = document.createElement("button");
     newButton.setAttribute("class", "btn btn-secondary");
-    newButton.setAttribute("id", searchArray[i]);
-    newButton.textContent = searchArray[i];
+    newButton.setAttribute("id", savedSearches[i]);
+    newButton.textContent = savedSearches[i];
     cityBtnsContainer.append(newButton);
   }
 }
